@@ -1,4 +1,5 @@
-import { createArrayBuffer, Track } from "."
+import { createArrayBuffer } from "."
+import type { Track } from "./type"
 
 export const mergeTracks = async (trackConfig: Track[]) => {
   const audioContext = new AudioContext()

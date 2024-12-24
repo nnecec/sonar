@@ -1,25 +1,9 @@
 "use client"
 
-import { preview, Track } from "./utils"
-import { mergeTracks } from "./utils/merge"
+import { preview, Track, mergeTracks } from "./sonar"
 import { useRef, useState } from "react"
 import { useInterval } from "@reactuses/core"
-
-const trackConfig: Track[] = [
-  {
-    src: "/assets/relaxing-guitar-loop-v5-245859.mp3",
-    fadeInEnd: 4, // 渐入结束时间
-    fadeOutStart: -4, // 渐出开始时间
-    startPosition: 2,
-  },
-  {
-    src: "/assets/typing-keyboard-sound-254462.mp3",
-  },
-  {
-    src: "/assets/level-up-191997.mp3",
-    startPosition: 10, // 插入到第10秒播放
-  },
-]
+import { trackConfig } from "./utils/data"
 
 function App() {
   const [interval, setInterval] = useState<number | null>(null)

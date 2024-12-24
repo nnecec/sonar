@@ -1,11 +1,5 @@
 import { mergeTracks } from "./merge"
 
-export type Track = {
-  src: string
-  startPosition?: number
-  fadeInEnd?: number
-  fadeOutStart?: number
-}
 // 加载所有音轨到 AudioBuffer 中
 export async function createArrayBuffer(src: string): Promise<ArrayBuffer> {
   const response = await fetch(src)
@@ -42,3 +36,6 @@ export function preview({
   source.connect(audioContext.destination)
   return source
 }
+
+export { mergeTracks }
+export * from "./model"
